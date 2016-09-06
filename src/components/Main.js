@@ -1,5 +1,7 @@
 import React from 'react';
 import MovieList from './MovieList'
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 
 const Main = React.createClass({
     getInitialState() {
@@ -414,4 +416,4 @@ const Main = React.createClass({
     }
 });
 
-export default Main;
+export default DragDropContext(HTML5Backend)(Main);

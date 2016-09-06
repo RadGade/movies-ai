@@ -435,6 +435,11 @@ template {
   animation-iteration-count: infinite;
   transform-origin: 50% 50%;
   position: absolute;
+  z-index: 1;
+  overflow: hidden;
+}
+.movie-player .movie.clicked {
+  z-index: 2;
 }
 .movie-player .movie .movie-image {
   text-align: center;

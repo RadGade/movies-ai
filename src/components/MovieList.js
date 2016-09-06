@@ -19,8 +19,8 @@ const MovieList = React.createClass({
     render() {
         var self = this;
         let movies = this.props.movies.map(function(item){
-            let left = self._getRandomIntInclusive(10,90),
-                top = self._getRandomIntInclusive(10,90),
+            let left = self._getRandomIntInclusive(20,70),
+                top = self._getRandomIntInclusive(0,70),
                 animDelay = self._getRandomInclusive(0,2),
                 animLength = self._getRandomIntInclusive(6,10);
 

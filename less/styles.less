@@ -35,6 +35,12 @@
     animation-iteration-count: infinite;
     transform-origin: 50% 50%;
     position: absolute;
+    z-index: 1;
+    overflow: hidden;
+
+    &.clicked {
+      z-index: 2;
+    }
 
     .movie-image {
       text-align: center;
