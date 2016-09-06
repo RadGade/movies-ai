@@ -401,5 +401,85 @@ template {
 [hidden] {
   display: none;
 }
+.movie-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  background: #EEE;
+  overflow: hidden;
+}
+.movie-player .movie-cloud,
+.movie-player .movie-dislike,
+.movie-player .movie-like {
+  height: 100%;
+  flex-grow: 1;
+  background: #333;
+}
+.movie-player .movie-cloud {
+  flex-grow: 4;
+  background: transparent;
+}
+.movie-player .movies-container {
+  position: relative;
+  height: 100%;
+}
+.movie-player .movie {
+  width: 150px;
+  height: 300px;
+  background: #222;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.75);
+  animation: movieFloatFrames linear;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  position: absolute;
+}
+.movie-player .movie .movie-image {
+  text-align: center;
+  height: 220px;
+  padding: 5px 0;
+}
+.movie-player .movie .movie-image img {
+  width: auto;
+  height: 100%;
+}
+.movie-player .movie .movie-info {
+  color: #FFF;
+  display: block;
+  padding: 10px;
+  height: 60px;
+}
+.movie-player .movie .movie-info h3 {
+  font-size: 12px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  line-height: 1em;
+  margin-top: 0;
+}
+.movie-player .movie .movie-info p {
+  font-size: 9px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@keyframes movieFloatFrames {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-10px, -6px);
+  }
+  50% {
+    transform: translate(-6px, -10px);
+  }
+  75% {
+    transform: translate(10px, -6px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
 
 /*# sourceMappingURL=maps/styles.css.map */
